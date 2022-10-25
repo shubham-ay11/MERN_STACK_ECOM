@@ -6,6 +6,9 @@ import { Helmet } from "react-helmet";
 import { getProduct } from "../../actions/productAction.js";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/loader.js";
+import { useAlert } from "react-alert";
+
+
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -13,8 +16,11 @@ const Home = () => {
     (state) => state.products
   );
   useEffect(() => {
+    if(error){
+   return  alert(error)
+    }
     dispatch(getProduct());
-  }, [dispatch]);
+  }, [dispatch, error]);
 
   return (
     <>
@@ -22,7 +28,7 @@ const Home = () => {
     <>
     <Helmet title="StudentCart" />
     <div className="banner">
-      <p>Welcome to StudentCart</p>
+          <p>Welcome to StudentCart</p>
       <h1>Find Amazing Products Below</h1>
       <a href="#container">
         <button>

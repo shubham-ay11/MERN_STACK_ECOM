@@ -12,7 +12,7 @@ const Product = ({product}) => {
     isHalf:true,
 }
   return (
-   <Link className='productCard' to={product._id}>
+   <Link className='productCard' to={`/product/${product._id}`}>
     {/* <img src={product.images[0].url}/> */}
     <img src="https://i.ibb.co/DRST11n/1.webp" />
     <p>{product.name}</p>
