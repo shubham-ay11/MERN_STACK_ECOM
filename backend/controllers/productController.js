@@ -16,7 +16,7 @@ exports.createProduct = asyncErrorHandle(async (req, res, next) => {
   });
 });
 
-exports.getAllProducts = asyncErrorHandle(async (req, res) => {
+exports.getAllProducts = asyncErrorHandle(async (req, res,next) => {
   const resultPerPage = 8;
   const productCount = await Product.countDocuments();
   const apifeature = new Apifeatures(Product.find(), req.query)
@@ -71,8 +71,8 @@ exports.deleteProduct = asyncErrorHandle(async (req, res, next) => {
 //Get specific (one) product
 
 exports.getSpecificProduct = asyncErrorHandle(async (req, res, next) => {
+  console.log("ss")
   const product = await Product.findById(req.params.id);
-
   if (!product) {
     return next(new ErrorHander("Product not found", 404));
   }

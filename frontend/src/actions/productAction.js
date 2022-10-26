@@ -7,6 +7,7 @@ import {ALL_PRODUCT_REQUEST,
     CLEAR_ERRORS} from "../constants/productConstants"
 import axios from "axios";
 
+
 export const getProduct = ()=>async (dispatch)=>{
     try{
 
@@ -35,7 +36,6 @@ dispatch({
 
 // Get Product Details
 export const getProductDetails =  (id)=>async (dispatch)=>{
-    alert("here")
 try{
     dispatch({
         type: PRODUCT_DETAILS_REQUEST
