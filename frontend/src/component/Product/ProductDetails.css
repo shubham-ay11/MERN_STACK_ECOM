@@ -138,6 +138,52 @@ background-color: rgb(243, 53, 19);
 
 }
 
+.reviewHeading{
+    color: #000000be;
+    font: 500 1.4vmax "Roboto";
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.226);
+    padding: 1vmax;
+    width: 20vmax;
+    margin: auto;
+    margin-bottom: 4vmax;
+}
+.reviewCard{
+   
+    box-shadow: 0 0 5px rgba(0,0,0,0.226);
+    border: 1px solid rgba(56,56,56,0.116);
+    width: 30vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1vmax;
+    padding: 3vmax;
+}
+.reviewCard>img{
+    border-radius: 100%;
+    width: 5vmax;
+   
+
+}
+.reviewCard>p{
+    color: rgba(0,0,0,0.836);
+    font: 600 0.9vmax "Roboto";
+}
+.reviewCard>span{
+    color: rgba(0,0,0,0.445);
+    font: 600 0.9vmax "Montserrat";
+}
+.noReviews{
+    font: 400 1.3vmax "Roboto";
+    text-align: center;
+    color: rgba(0, 0, 0, 0.548);
+
+}
+.reviews{
+    display: flex;
+    flex-wrap: wrap;
+}
 @media screen and (max-width:600px) {
     .productDetails{
         flex-direction: column;
@@ -147,11 +193,14 @@ background-color: rgb(243, 53, 19);
         padding: 6vmax;
        
     }
+    .reviews{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+    }
     .productDetailsMain{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      
     }
     .productDetailsMain > img{
         width: 100% !important;
@@ -160,9 +209,43 @@ background-color: rgb(243, 53, 19);
         align-items: center;
     }
     .CarouselImage{
-        width: 40vmax !important;
-        height: 300px;
+       width: 100%;
+       height: 100%;
 
 
+    }
+    .detailsBlock-1 > h2{
+        font: 600 2.5vmax "Roboto";
+        text-align: center;
+    }
+    .detailsBlock-1 > p{
+        text-align: center;
+        margin: 2% 0;
+        font: 200 1.5vmax "Montserrat";
+        
+    }
+    .detailsBlock-2 > span{
+        align-items: center;
+        font-size: 1.5vmax;
+    }
+    .detailsBlock-3-1{
+        flex-direction: column;
+    }
+    .detailsBlock-3>h1{
+       text-align: center;
+       font-size: 2.5vmax;
+    }
+    .detailsBlock-3-1{
+justify-content: center;
+align-items: center;
+    }
+    .detailsBlock-3>p{
+        text-align: center;
+        margin: 3% 0;
+    }
+    .detailsBlock-4{
+justify-content: center;
+align-items: center;
+font-size: 2vmax;
     }
 }
