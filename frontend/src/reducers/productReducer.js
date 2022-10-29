@@ -19,7 +19,8 @@ switch (action.type) {
             return{
                 loading:false,
                 products:action.payload.product,
-                productsCount:action.payload.productsCount
+                productCount:action.payload.productCount,
+                resultPerPage:action.payload.resultPerPage
             }
             case ALL_PRODUCT_FAIL:
                

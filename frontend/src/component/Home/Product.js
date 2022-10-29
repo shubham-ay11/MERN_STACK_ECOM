@@ -11,7 +11,6 @@ const Product = ({product}) => {
     value:product.ratings,
     isHalf:true,
 }
-console.log(product.reviews)
   return (
    <Link className='productCard' to={`/product/${product._id}`}>
     <img src={product.images[0].url}/>

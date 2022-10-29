@@ -8,13 +8,16 @@ import {ALL_PRODUCT_REQUEST,
 import axios from "axios";
 const url=`http://localhost:4000/api/v1`;
 
-export const getProduct = (keyword="")=>async (dispatch)=>{
+export const getProduct = (keyword="",currentPage=1,price=[0,25000],category)=>async (dispatch)=>{
     try{
 
 dispatch({
     type:ALL_PRODUCT_REQUEST
 });
-let link=`/products?keyword=${keyword}`;
+let link=`/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+if(category){
+     link=`/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}`;
+}
 const {data}=await axios.get(url+link);
 dispatch({
     type:ALL_PRODUCT_SUCCESS,
