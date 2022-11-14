@@ -25,6 +25,7 @@ if(tab=="register"){
   registerTab.current.classList.remove("shiftToNeutralForm");
   loginTab.current.classList.remove("shiftToLeft");
 }
+
 }
 
 const loginSubmit =()=>{
